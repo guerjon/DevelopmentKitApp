@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/scanning_div"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Scanning ..."
+            android:textAlignment="center" />
+        <LinearLayout
+            android:layout_width="50dp"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:progressTint="@android:color/background_dark" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/activate_location_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:visibility="invisible"
+        >
+        <TextView
+            android:id="@+id/location_services_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In order to use the bluetooth the location services are required"
+            android:layout_margin="20dp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="activateLocationsBtnPressed"
+            android:text="Activate Location Services"
+
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activate_bluetooth_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:visibility="invisible"
+        >
+        <TextView
+            android:id="@+id/bluetotth_services_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In order to connect to the Sure-Fi Module the bluetooth is required."
+            android:layout_margin="20dp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="activityBluetoothBtnPressed"
+            android:text="Activate Bluetooth"
+
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical" />
+</LinearLayout>
