@@ -12,4 +12,6 @@
     <color name="colorSerialDataRemote">#3498DB</color>
     <color name="colorUknownType">#F39C12</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="inputBackground">#EEEEEE</color>
+    <color name="colorGray">#EEEEEE</color>
 </resources>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/other_setings_main_tablayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="fill_parent">
+            <EditText
+                android:text="INDICATIONS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/first_led_tag"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/label_background"
+                    android:textSize="14dp"
+                    android:layout_marginRight="10dp"
+                    android:text="0" />
+                <Spinner
+                    android:background="@drawable/snipper_background"
+                    android:id="@+id/first_led_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/second_led_tag"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/label_background"
+                    android:textSize="14dp"
+                    android:text="0" />
+
+                <Spinner
+                    android:background="@drawable/snipper_background"
+                    android:id="@+id/second_led_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/third_led_tag"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:background="@color/inputBackground"
+                    android:textSize="14dp"
+                    android:text="0" />
+
+                <Spinner
+                    android:background="@drawable/snipper_background"
+                    android:id="@+id/third_led_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/fourth_led_tag"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:background="@color/inputBackground"
+                    android:textSize="14dp"
+                    android:text="0" />
+
+                <Spinner
+                    android:background="@drawable/snipper_background"
+                    android:id="@+id/fourth_led_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/fifth_led_tag"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:background="@color/inputBackground"
+                    android:textSize="14dp"
+                    android:text="0" />
+
+                <Spinner
+                    android:background="@drawable/snipper_background"
+                    android:id="@+id/fifth_led_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/sixth_led_tag"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:background="@color/inputBackground"
+                    android:textSize="14dp"
+                    android:text="0" />
+
+                <Spinner
+                    android:background="@drawable/snipper_background"
+                    android:id="@+id/sixth_led_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="All off"
+                    android:background="@drawable/button_background"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/qos_tag"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14dp"
+                        android:text="QOS Config" />
+                    <Spinner
+                        android:background="@drawable/snipper_background"
+                        android:id="@+id/qos_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/button_hold_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14dp"
+                        android:text="Button Hold Time" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Spinner
+                            android:background="@drawable/snipper_background"
+                            android:id="@+id/button_hold_time_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="30dp" />
+                        <TextView
+                            android:layout_weight="0"
+
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:text="sec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/button_config_tag"
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Button Config" />
+                    <Spinner
+                        android:background="@drawable/snipper_background"
+                        android:id="@+id/button_config_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/rx_led_mode_tag"
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Rx LED Mode" />
+                    <Spinner
+                        android:background="@drawable/snipper_background"
+                        android:id="@+id/rx_led_mode_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tx_led_mode_tag"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+
+                    android:text="Button Config" />
+                <Spinner
+                    android:background="@drawable/snipper_background"
+                    android:id="@+id/tx_led_mode_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

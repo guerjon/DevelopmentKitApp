@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/main_tablayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars = "vertical"
+        android:scrollbarStyle="insideInset"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:id="@+id/scanning_div"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/title_template"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="Sure-Fi Radio Module"
+                    android:textAlignment="center" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Connecting ..."
+                        android:textAlignment="center" />
+
+                    <LinearLayout
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ProgressBar
+                            style="@android:style/Widget.ProgressBar"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:progressTint="@android:color/background_dark" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:fillViewport="true">
+                <LinearLayout
+                    android:id="@+id/container_form"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:background="@drawable/section_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/rx_uid"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/input_background"
+                                android:hint="Rx UID"
+                                android:textAlignment="center" />
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/label_background"
+                                android:text="3 bytes"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/payload_size"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/input_background"
+                                android:hint="Payload Size"
+                                android:textAlignment="center" />
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="64 bytes RxPackageLength"
+                                android:textAlignment="center"
+                                android:background="@color/colorGray"
+                                android:textSize="8dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/tx_uid"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/input_background"
+                                android:hint="Tx UID"
+                                android:textAlignment="center" />
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/tx_uid_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:background="@color/colorGray"
+                                    android:text="3 bytes"
+                                    android:textAlignment="center" />
+                                <TextView
+                                    android:id="@+id/encription_tag"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:background="@color/colorGray"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:text="X Encription: Rx UID is 0 bytes"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/fhss_input"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/input_background"
+                        android:hint="FHSS"
+                        android:textAlignment="center" />
+
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/transmit_power_tag"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="left"
+                                android:text="Transmit Power" />
+
+                            <Spinner
+                                android:background="@drawable/snipper_background"
+                                android:id="@+id/transmit_power_snnipper"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/polarity_tag"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="left"
+                                android:text="Polarity" />
+
+                            <Spinner
+                                android:background="@drawable/snipper_background"
+                                android:id="@+id/polarity_snnipper"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/num_retries_tag"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="left"
+                                android:text="Num Retries" />
+                            <Spinner
+                                android:background="@drawable/snipper_background"
+                                android:id="@+id/num_retries_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/radio_mode_tag"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="left"
+                                android:text="Radio Mode" />
+                            <Spinner
+                                android:background="@drawable/snipper_background"
+                                android:id="@+id/radio_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="left"
+                                android:text="Spreading Factor" />
+                            <Spinner
+                                android:background="@drawable/snipper_background"
+                                android:id="@+id/spreading_factor_snniper"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="left"
+                                android:text="Bandwidth" />
+                            <Spinner
+                                android:background="@drawable/snipper_background"
+                                android:id="@+id/band_width_snniper"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="@drawable/section_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <com.suke.widget.SwitchButton
+                                android:id="@+id/acks_enabled"
+                                android:layout_width="50dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="Acks Enabled"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:gravity="center"
+                            android:layout_height="wrap_content">
+                            <com.suke.widget.SwitchButton
+                                android:id="@+id/quite_mode"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="Quiet Mode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

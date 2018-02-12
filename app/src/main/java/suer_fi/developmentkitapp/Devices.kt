@@ -111,7 +111,7 @@ class Devices : AppCompatActivity(), ActivityCompat.OnRequestPermissionsResultCa
         if(id == R.id.stop_scan){
             hideStopScanButton()
             showScanButton()
-           this.stopScan()
+            this.stopScan()
         }
 
         return super.onOptionsItemSelected(item)

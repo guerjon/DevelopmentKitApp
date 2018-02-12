@@ -47,10 +47,14 @@ class DevicesAdapter(
             stopDevicesScan()
 
             var bluetoothPeripheral : BluetoothPeripheral = device as BluetoothPeripheral
-            var i = Intent(context,ModuleInterface::class.java)
 
-            i.putExtra("device",bluetoothPeripheral)
-            context.startActivity(i)
+
+            if(device?.hardware_type == "00"){
+                var i = Intent(context,ModuleInterface::class.java)
+
+                i.putExtra("device",bluetoothPeripheral)
+                context.startActivity(i)
+            }
         }
 
         private fun stopDevicesScan(){

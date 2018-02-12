@@ -51,7 +51,6 @@ open class BluetoothPeripheral(
         parcel.writeParcelable(bluetooth_device, flags)
     }
 
-
     private fun calculateSecurityString() : ByteArray {
 
         var peripheralRXUUID = this.device_id.toUpperCase().reversed()
