@@ -52,6 +52,30 @@ class ModuleInterface : FragmentActivity() {
 
     }
 
+    private fun hideBarNavigation(){
+        var decorView = window.decorView
+        val uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN
+        decorView.systemUiVisibility = uiOptions
+    }
+
+
+    private fun initDevice(){
+        Log.d("DEBUG","initDevice")
+
+        device = intent.getParcelableExtra<BluetoothPeripheral>("device")
+
+        if(device != null){
+            if(device is BluetoothPeripheral){
+                connectDevice()
+            }else{
+                Log.d("DEBUG","init device fail")
+            }
+        }else{
+            Log.d("DEBUG","init device fail, the device is null")
+        }
+    }
+
+
     private fun initSizes(){
         val displayMetrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(displayMetrics)
@@ -72,11 +96,11 @@ class ModuleInterface : FragmentActivity() {
         // Gets the layout params that will allow you to resize the layout
         val params = view_pager.layoutParams
         val tabs_params = tabs.layoutParams
-        val fotter_params = footer.layoutParams
+        val fotter_params = findViewById<LinearLayout>(R.id.footer) as LinearLayout
 
         // Changes the height and width to the specified *pixels*
 
-        avaible_space = height - (tabs_params.height + fotter_params.height + 50)
+        avaible_space = height - (tabs_params.height + fotter_params.layoutParams.height + 50)
         params.height = avaible_space
         params.width = width
         view_pager.setLayoutParams(params)
@@ -84,36 +108,21 @@ class ModuleInterface : FragmentActivity() {
 
     /** Called when the user taps the Send button  */
     fun changeMode(view: View) {
+        var transmit_section = findViewById<LinearLayout>(R.id.transmit_section)
+        var recieve_section = findViewById<LinearLayout>(R.id.recieve_section)
         transmit_section.visibility = View.GONE
         recieve_section.visibility = View.VISIBLE
     }
 
     fun changeToTransmitSection(view: View){
+        var transmit_section = findViewById<LinearLayout>(R.id.transmit_section)
+        var recieve_section = findViewById<LinearLayout>(R.id.recieve_section)
+
         recieve_section.visibility = View.GONE
         transmit_section.visibility = View.VISIBLE
     }
 
-    private fun hideBarNavigation(){
-        var decorView = window.decorView
-        val uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN
-        decorView.systemUiVisibility = uiOptions
-    }
 
-    private fun initDevice(){
-        Log.d("DEBUG","initDevice")
-
-        device = intent.getParcelableExtra<BluetoothPeripheral>("device")
-
-        if(device != null){
-            if(device is BluetoothPeripheral){
-                connectDevice()
-            }else{
-                Log.d("DEBUG","init device fail")
-            }
-        }else{
-            Log.d("DEBUG","init device fail, the device is null")
-        }
-    }
 
     private fun processDeviceConnected(){
 

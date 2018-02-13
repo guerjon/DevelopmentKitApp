@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
+import com.shashank.sony.fancytoastlib.FancyToast
 import kotlinx.android.synthetic.main.device_list_item.view.*
 
 /**
@@ -54,6 +55,14 @@ class DevicesAdapter(
 
                 i.putExtra("device",bluetoothPeripheral)
                 context.startActivity(i)
+            }else{
+                FancyToast.makeText(
+                        context,
+                        "This is not a Sure-Fi Module device.",
+                        FancyToast.LENGTH_LONG,
+                        FancyToast.ERROR,
+                        false
+                ).show()
             }
         }
 

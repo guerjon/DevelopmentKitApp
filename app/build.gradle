@@ -21,12 +21,7 @@ android {
             java.srcDirs = ['src/main/java','.apt_generated']
             aidl.srcDirs = ['src/main/aidl','.apt_generated']
             assets.srcDirs = ['src/main/assets']
-            res.srcDirs =
-                    [
-                            'src/main/res/layout/tabs',
-                            'src/main/res/layout',
-                            'src/main/res'
-                    ]
+            res.srcDirs = ['src/main/res','src/main/images']
         }
     }
 
@@ -36,8 +31,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-
 }
 
 dependencies {
@@ -54,4 +47,5 @@ dependencies {
     compile "org.jetbrains.anko:anko-design:$anko_version" // For SnackBars
     compile "com.android.support:recyclerview-v7:26.1.0"
     compile 'com.github.zcweng:switch-button:0.0.3@aar'
+    compile 'com.github.Shashank02051997:FancyToast-Android:0.1.3'
 }

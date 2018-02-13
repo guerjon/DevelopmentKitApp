@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:background="@drawable/label_background"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:padding="10dp"
+            android:layout_weight="10"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/transmit_section"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_section_with_borders"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <!-- Hex Button -->
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="HEX"
+                                android:textAlignment="center" />
+                            <com.suke.widget.SwitchButton
+                                android:id="@+id/transmit_switch_button"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <!-- Hex Button -->
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:text="Length: 20"
+                                    android:layout_weight="1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content" />
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:layout_weight="1"
+                                    android:text="Count: 100"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/transmint_input"
+                                    android:layout_width="200dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/input_background"
+                                    android:hint="Transmit"
+                                    android:textAlignment="center" />
+                                <ImageButton
+                                    android:id="@+id/ButtonSendFeedback"
+                                    android:src="@drawable/send_icon"
+                                    android:background="@android:color/transparent"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="right|top"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent">
+                            <ImageButton
+                                android:id="@+id/changeFooter"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:onClick="changeMode"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/ic_swap_vertical_circle_black_24dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent">
+                    <LinearLayout
+
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="HEX"
+                            android:textAlignment="center" />
+
+                        <com.suke.widget.SwitchButton
+                            android:id="@+id/switch_receiver_button"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Acknowledgement"
+
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/label_background"
+                                android:text="123442"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent">
+                            <TextView
+                                android:textSize="10dp"
+                                android:text="RSSI:"
+                                android:gravity="center"
+                                android:textColor="@color/colorSureFimodule"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                            <TextView
+                                android:textSize="10dp"
+                                android:text="-134"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent">
+                            <TextView
+                                android:text="SNR:"
+                                android:textSize="10dp"
+                                android:gravity="center"
+                                android:textColor="@color/colorSureFimodule"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                            <TextView
+                                android:textSize="10dp"
+                                android:text="-4"
+                                android:gravity="center"
+                                android:textAlignment="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/recieve_section"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <com.suke.widget.SwitchButton
+                            android:id="@+id/switch_button"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+
+                            android:text="HEX"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="75dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="20dp"
+                            android:text="Acknowledgement"
+                            android:textAlignment="center"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorWhite"
+                            android:gravity="center"
+                            android:text="ABC123442"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="50dp">
+                    <Button
+                        android:id="@+id/clear_transmit_data"
+                        android:layout_height="match_parent"
+                        android:layout_width="200dp"
+                        android:textSize="10dp"
+                        android:text="Clear"
+                        android:onClick="clear_acknowledgement"
+                        >
+                    </Button>
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="right"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="-50dp"
+                    android:layout_height="50dp">
+                    <ImageButton
+                        android:id="@+id/changeToTransmitBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:onClick="changeToTransmitSection"
+                        android:src="@drawable/ic_swap_vertical_circle_black_24dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
